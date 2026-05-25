@@ -17,7 +17,7 @@ const ReviewList = ({ companyId, company }) => {
     try {
 
       const res = await axios.get(
-        `https://zoronal-1.onrender.com/api/reviews/${companyId}?sortBy=${sortBy}`
+        `${import.meta.env.VITE_BACKEND_URL}/api/reviews/${companyId}?sortBy=${sortBy}`
       );
 
       setReviews(res.data.data);
@@ -74,7 +74,7 @@ const ReviewList = ({ companyId, company }) => {
   try {
 
     await axios.put(
-      `https://zoronal-1.onrender.com/api/reviews/like/${reviewId}`
+      `${import.meta.env.VITE_BACKEND_URL}/api/reviews/like/${reviewId}`
     );
 
     // Save locally

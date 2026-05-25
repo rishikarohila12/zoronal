@@ -12,7 +12,7 @@ const CompanyDetail = () => {
   useEffect(() => {
 
     axios
-      .get(`https://zoronal-1.onrender.com/api/companies/${id}`)
+      .get(`${import.meta.env.VITE_BACKEND_URL}/api/companies/${id}`)
       .then((res) => {
 
         setCompany(res.data.data);

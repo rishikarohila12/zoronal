@@ -35,7 +35,7 @@ const AddReviewForm = ({
     try {
 
       await axios.post(
-        "https://zoronal-1.onrender.com/api/reviews",
+        `${import.meta.env.VITE_BACKEND_URL}/api/reviews`,
         {
           companyId,
           ...formData,

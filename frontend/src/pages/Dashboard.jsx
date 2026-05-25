@@ -18,7 +18,7 @@ const [showLogin, setShowLogin] = useState(false);
   const fetchCompanies = async () => {
     try {
       const parsedCity = city.split(',')[0].trim();
-      const response = await axios.get(`https://zoronal-1.onrender.com/api/companies`, {
+        const response = await axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/companies`, {
         params: { search, city: parsedCity, sortBy }
       });
       setCompanies(response.data.data);
