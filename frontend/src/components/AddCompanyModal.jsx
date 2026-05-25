@@ -20,7 +20,7 @@ const AddCompanyModal = ({ closeModal, refreshData }) => {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/companies", formData);
+      await axios.post("https://zoronal-1.onrender.com/api/companies", formData);
 
       refreshData();
       closeModal();
